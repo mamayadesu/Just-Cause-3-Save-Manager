@@ -1,0 +1,10 @@
+C:\Users\Semyon\Documents\Visual Studio 2013\Projects\Just Cause 3 Save Manager\Just Cause 3 Save Manager\bin\Debug\Just Cause 3 Save Manager.exe.config
+C:\Users\Semyon\Documents\Visual Studio 2013\Projects\Just Cause 3 Save Manager\Just Cause 3 Save Manager\bin\Debug\Just Cause 3 Save Manager.exe
+C:\Users\Semyon\Documents\Visual Studio 2013\Projects\Just Cause 3 Save Manager\Just Cause 3 Save Manager\bin\Debug\Just Cause 3 Save Manager.pdb
+C:\Users\Semyon\Documents\Visual Studio 2013\Projects\Just Cause 3 Save Manager\Just Cause 3 Save Manager\obj\Debug\Just Cause 3 Save Manager.csprojResolveAssemblyReference.cache
+C:\Users\Semyon\Documents\Visual Studio 2013\Projects\Just Cause 3 Save Manager\Just Cause 3 Save Manager\obj\Debug\Just_Cause_3_Save_Manager.SelectProfileForm.resources
+C:\Users\Semyon\Documents\Visual Studio 2013\Projects\Just Cause 3 Save Manager\Just Cause 3 Save Manager\obj\Debug\Just_Cause_3_Save_Manager.Properties.Resources.resources
+C:\Users\Semyon\Documents\Visual Studio 2013\Projects\Just Cause 3 Save Manager\Just Cause 3 Save Manager\obj\Debug\Just Cause 3 Save Manager.csproj.GenerateResource.Cache
+C:\Users\Semyon\Documents\Visual Studio 2013\Projects\Just Cause 3 Save Manager\Just Cause 3 Save Manager\obj\Debug\Just Cause 3 Save Manager.exe
+C:\Users\Semyon\Documents\Visual Studio 2013\Projects\Just Cause 3 Save Manager\Just Cause 3 Save Manager\obj\Debug\Just Cause 3 Save Manager.pdb
+C:\Users\Semyon\Documents\Visual Studio 2013\Projects\Just Cause 3 Save Manager\Just Cause 3 Save Manager\obj\Debug\Just_Cause_3_Save_Manager.MainForm.resources
