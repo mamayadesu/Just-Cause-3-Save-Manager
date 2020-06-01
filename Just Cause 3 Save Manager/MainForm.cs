@@ -119,17 +119,23 @@ namespace Just_Cause_3_Save_Manager
             string onlyfile;
             string n;
             int i = -1;
+            int a = -1;
             foreach (string file in files)
             {
                 i++;
-                LoadedSavesWithFullPath.Add(file);
                 file1 = file.Split('\\');
                 onlyfile = file1[file1.Length - 1];
                 n = onlyfile.Replace("JC3_" + selectedSteamId + "_", "").Replace(".zip", "");
+                if (!Methods.IsDigitsOnly(n) || n.Length != 4)
+                {
+                    continue;
+                }
+                a++;
+                LoadedSavesWithFullPath.Add(file);
                 LoadedSaves.Add(n);
                 SavesTable.RowCount++;
-                SavesTable.Rows[i].Cells[0].Value = lm.G("SaveN") + n;
-                SavesTable.Rows[i].Cells[1].Value = File.GetLastWriteTime(file).ToString("dd/MM/yyyy HH:mm:ss");
+                SavesTable.Rows[a].Cells[0].Value = lm.G("SaveN") + n;
+                SavesTable.Rows[a].Cells[1].Value = File.GetLastWriteTime(file).ToString("dd/MM/yyyy HH:mm:ss");
             }
             isTableFilled = true;
 
@@ -272,6 +278,11 @@ namespace Just_Cause_3_Save_Manager
 
         private void newSaveDataBtn_Click(object sender, EventArgs e)
         {
+            while (newSaveDataNumberTb.Text.Length < 4)
+            {
+                newSaveDataNumberTb.Text = "0" + newSaveDataNumberTb.Text;
+            }
+
             if (newSaveDataNumberTb.Text == "")
             {
                 MessageBox.Show(lm.G("InputNumberOfNewSaveData"), "", MessageBoxButtons.OK, MessageBoxIcon.Error);

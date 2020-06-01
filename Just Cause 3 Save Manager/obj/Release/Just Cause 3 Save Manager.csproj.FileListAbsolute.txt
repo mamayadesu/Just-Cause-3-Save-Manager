@@ -7,3 +7,4 @@ C:\Users\Semyon\Documents\Visual Studio 2013\Projects\Just Cause 3 Save Manager\
 C:\Users\Semyon\Documents\Visual Studio 2013\Projects\Just Cause 3 Save Manager\Just Cause 3 Save Manager\obj\Release\Just Cause 3 Save Manager.csproj.GenerateResource.Cache
 C:\Users\Semyon\Documents\Visual Studio 2013\Projects\Just Cause 3 Save Manager\Just Cause 3 Save Manager\obj\Release\Just Cause 3 Save Manager.exe
 C:\Users\Semyon\Documents\Visual Studio 2013\Projects\Just Cause 3 Save Manager\Just Cause 3 Save Manager\obj\Release\Just Cause 3 Save Manager.pdb
+C:\Users\Semyon\Documents\Visual Studio 2013\Projects\Just Cause 3 Save Manager\Just Cause 3 Save Manager\obj\Release\Just Cause 3 Save Manager.csprojResolveAssemblyReference.cache
