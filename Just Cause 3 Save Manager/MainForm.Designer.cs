@@ -36,6 +36,8 @@
             this.modifiedLbl = new System.Windows.Forms.Label();
             this.saveNumberLbl = new System.Windows.Forms.Label();
             this.SavesTable = new System.Windows.Forms.DataGridView();
+            this.savenumber_col_savestable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modified_col_savestable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.newSaveDataNumberTb = new System.Windows.Forms.TextBox();
             this.inputNumberLbl = new System.Windows.Forms.Label();
             this.newSaveDataBtn = new System.Windows.Forms.Button();
@@ -45,16 +47,14 @@
             this.deleteSaveDataBtn = new System.Windows.Forms.Button();
             this.overwriteSaveData = new System.Windows.Forms.Button();
             this.SettingsTab = new System.Windows.Forms.TabPage();
+            this.appVersion = new System.Windows.Forms.Label();
+            this.appVerLbl = new System.Windows.Forms.Label();
             this.nicknameHintLbl = new System.Windows.Forms.Label();
             this.languageCb = new System.Windows.Forms.ComboBox();
             this.languageLbl = new System.Windows.Forms.Label();
             this.nicknameTb = new System.Windows.Forms.TextBox();
             this.inputNicknameLbl = new System.Windows.Forms.Label();
             this.checkLng = new System.Windows.Forms.Timer(this.components);
-            this.savenumber_col_savestable = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modified_col_savestable = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.appVerLbl = new System.Windows.Forms.Label();
-            this.appVersion = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.SavesTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SavesTable)).BeginInit();
@@ -143,6 +143,22 @@
             this.SavesTable.Size = new System.Drawing.Size(370, 388);
             this.SavesTable.TabIndex = 9;
             this.SavesTable.SelectionChanged += new System.EventHandler(this.SavesTable_SelectionChanged);
+            // 
+            // savenumber_col_savestable
+            // 
+            this.savenumber_col_savestable.FillWeight = 88.32487F;
+            this.savenumber_col_savestable.HeaderText = "Save number";
+            this.savenumber_col_savestable.Name = "savenumber_col_savestable";
+            this.savenumber_col_savestable.ReadOnly = true;
+            this.savenumber_col_savestable.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // modified_col_savestable
+            // 
+            this.modified_col_savestable.FillWeight = 111.6751F;
+            this.modified_col_savestable.HeaderText = "When saved";
+            this.modified_col_savestable.Name = "modified_col_savestable";
+            this.modified_col_savestable.ReadOnly = true;
+            this.modified_col_savestable.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // newSaveDataNumberTb
             // 
@@ -242,6 +258,25 @@
             this.SettingsTab.Text = "Settings";
             this.SettingsTab.UseVisualStyleBackColor = true;
             // 
+            // appVersion
+            // 
+            this.appVersion.AutoSize = true;
+            this.appVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.appVersion.Location = new System.Drawing.Point(588, 423);
+            this.appVersion.Name = "appVersion";
+            this.appVersion.Size = new System.Drawing.Size(59, 18);
+            this.appVersion.TabIndex = 6;
+            this.appVersion.Text = "1.2.0.0";
+            // 
+            // appVerLbl
+            // 
+            this.appVerLbl.AutoSize = true;
+            this.appVerLbl.Location = new System.Drawing.Point(479, 423);
+            this.appVerLbl.Name = "appVerLbl";
+            this.appVerLbl.Size = new System.Drawing.Size(58, 18);
+            this.appVerLbl.TabIndex = 5;
+            this.appVerLbl.Text = "Version";
+            // 
             // nicknameHintLbl
             // 
             this.nicknameHintLbl.AutoSize = true;
@@ -297,41 +332,6 @@
             this.checkLng.Enabled = true;
             this.checkLng.Interval = 1;
             this.checkLng.Tick += new System.EventHandler(this.checkLng_Tick);
-            // 
-            // savenumber_col_savestable
-            // 
-            this.savenumber_col_savestable.FillWeight = 88.32487F;
-            this.savenumber_col_savestable.HeaderText = "Save number";
-            this.savenumber_col_savestable.Name = "savenumber_col_savestable";
-            this.savenumber_col_savestable.ReadOnly = true;
-            this.savenumber_col_savestable.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // modified_col_savestable
-            // 
-            this.modified_col_savestable.FillWeight = 111.6751F;
-            this.modified_col_savestable.HeaderText = "When saved";
-            this.modified_col_savestable.Name = "modified_col_savestable";
-            this.modified_col_savestable.ReadOnly = true;
-            this.modified_col_savestable.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // appVerLbl
-            // 
-            this.appVerLbl.AutoSize = true;
-            this.appVerLbl.Location = new System.Drawing.Point(479, 423);
-            this.appVerLbl.Name = "appVerLbl";
-            this.appVerLbl.Size = new System.Drawing.Size(58, 18);
-            this.appVerLbl.TabIndex = 5;
-            this.appVerLbl.Text = "Version";
-            // 
-            // appVersion
-            // 
-            this.appVersion.AutoSize = true;
-            this.appVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.appVersion.Location = new System.Drawing.Point(588, 423);
-            this.appVersion.Name = "appVersion";
-            this.appVersion.Size = new System.Drawing.Size(59, 18);
-            this.appVersion.TabIndex = 6;
-            this.appVersion.Text = "1.1.0.0";
             // 
             // MainForm
             // 

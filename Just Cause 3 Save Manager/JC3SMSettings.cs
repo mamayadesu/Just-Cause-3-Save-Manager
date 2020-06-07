@@ -101,7 +101,7 @@ namespace Just_Cause_3_Save_Manager
 
             foreach (KeyValuePair<string, string> entry in Nicknames)
             {
-                output += entry.Key + " " + entry.Value;
+                output += entry.Key + " " + entry.Value + "\n";
             }
 
             try
