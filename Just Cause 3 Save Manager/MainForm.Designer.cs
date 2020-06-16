@@ -36,8 +36,6 @@
             this.modifiedLbl = new System.Windows.Forms.Label();
             this.saveNumberLbl = new System.Windows.Forms.Label();
             this.SavesTable = new System.Windows.Forms.DataGridView();
-            this.savenumber_col_savestable = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modified_col_savestable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.newSaveDataNumberTb = new System.Windows.Forms.TextBox();
             this.inputNumberLbl = new System.Windows.Forms.Label();
             this.newSaveDataBtn = new System.Windows.Forms.Button();
@@ -55,6 +53,10 @@
             this.nicknameTb = new System.Windows.Forms.TextBox();
             this.inputNicknameLbl = new System.Windows.Forms.Label();
             this.checkLng = new System.Windows.Forms.Timer(this.components);
+            this.sizeLbl = new System.Windows.Forms.Label();
+            this.savenumber_col_savestable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modified_col_savestable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.size_col_savestable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.SavesTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SavesTable)).BeginInit();
@@ -74,6 +76,7 @@
             // 
             // SavesTab
             // 
+            this.SavesTab.Controls.Add(this.sizeLbl);
             this.SavesTab.Controls.Add(this.recommendedLbl);
             this.SavesTab.Controls.Add(this.modifiedLbl);
             this.SavesTab.Controls.Add(this.saveNumberLbl);
@@ -135,30 +138,15 @@
             this.SavesTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SavesTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.savenumber_col_savestable,
-            this.modified_col_savestable});
-            this.SavesTable.Location = new System.Drawing.Point(21, 60);
+            this.modified_col_savestable,
+            this.size_col_savestable});
+            this.SavesTable.Location = new System.Drawing.Point(8, 60);
             this.SavesTable.Name = "SavesTable";
             this.SavesTable.ReadOnly = true;
             this.SavesTable.RowHeadersVisible = false;
-            this.SavesTable.Size = new System.Drawing.Size(370, 388);
+            this.SavesTable.Size = new System.Drawing.Size(383, 388);
             this.SavesTable.TabIndex = 9;
             this.SavesTable.SelectionChanged += new System.EventHandler(this.SavesTable_SelectionChanged);
-            // 
-            // savenumber_col_savestable
-            // 
-            this.savenumber_col_savestable.FillWeight = 88.32487F;
-            this.savenumber_col_savestable.HeaderText = "Save number";
-            this.savenumber_col_savestable.Name = "savenumber_col_savestable";
-            this.savenumber_col_savestable.ReadOnly = true;
-            this.savenumber_col_savestable.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // modified_col_savestable
-            // 
-            this.modified_col_savestable.FillWeight = 111.6751F;
-            this.modified_col_savestable.HeaderText = "When saved";
-            this.modified_col_savestable.Name = "modified_col_savestable";
-            this.modified_col_savestable.ReadOnly = true;
-            this.modified_col_savestable.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // newSaveDataNumberTb
             // 
@@ -192,7 +180,7 @@
             // 
             this.loggedAsLbl.AutoSize = true;
             this.loggedAsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.loggedAsLbl.Location = new System.Drawing.Point(156, 17);
+            this.loggedAsLbl.Location = new System.Drawing.Point(147, 22);
             this.loggedAsLbl.Name = "loggedAsLbl";
             this.loggedAsLbl.Size = new System.Drawing.Size(19, 20);
             this.loggedAsLbl.TabIndex = 5;
@@ -202,7 +190,7 @@
             // 
             this.youLoggedAsLbl.AutoSize = true;
             this.youLoggedAsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.youLoggedAsLbl.Location = new System.Drawing.Point(17, 17);
+            this.youLoggedAsLbl.Location = new System.Drawing.Point(8, 22);
             this.youLoggedAsLbl.Name = "youLoggedAsLbl";
             this.youLoggedAsLbl.Size = new System.Drawing.Size(111, 20);
             this.youLoggedAsLbl.TabIndex = 4;
@@ -266,7 +254,7 @@
             this.appVersion.Name = "appVersion";
             this.appVersion.Size = new System.Drawing.Size(59, 18);
             this.appVersion.TabIndex = 6;
-            this.appVersion.Text = "1.2.0.0";
+            this.appVersion.Text = "1.3.0.0";
             // 
             // appVerLbl
             // 
@@ -333,6 +321,39 @@
             this.checkLng.Interval = 1;
             this.checkLng.Tick += new System.EventHandler(this.checkLng_Tick);
             // 
+            // sizeLbl
+            // 
+            this.sizeLbl.AutoSize = true;
+            this.sizeLbl.Location = new System.Drawing.Point(533, 401);
+            this.sizeLbl.Name = "sizeLbl";
+            this.sizeLbl.Size = new System.Drawing.Size(37, 18);
+            this.sizeLbl.TabIndex = 13;
+            this.sizeLbl.Text = "Size";
+            this.sizeLbl.Visible = false;
+            // 
+            // savenumber_col_savestable
+            // 
+            this.savenumber_col_savestable.FillWeight = 91.37055F;
+            this.savenumber_col_savestable.HeaderText = "Save";
+            this.savenumber_col_savestable.Name = "savenumber_col_savestable";
+            this.savenumber_col_savestable.ReadOnly = true;
+            this.savenumber_col_savestable.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // modified_col_savestable
+            // 
+            this.modified_col_savestable.FillWeight = 125.8748F;
+            this.modified_col_savestable.HeaderText = "When saved";
+            this.modified_col_savestable.Name = "modified_col_savestable";
+            this.modified_col_savestable.ReadOnly = true;
+            this.modified_col_savestable.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // size_col_savestable
+            // 
+            this.size_col_savestable.FillWeight = 82.75462F;
+            this.size_col_savestable.HeaderText = "Size";
+            this.size_col_savestable.Name = "size_col_savestable";
+            this.size_col_savestable.ReadOnly = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -382,9 +403,11 @@
         private System.Windows.Forms.Timer checkLng;
         private System.Windows.Forms.Label recommendedLbl;
         private System.Windows.Forms.Label nicknameHintLbl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn savenumber_col_savestable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn modified_col_savestable;
         private System.Windows.Forms.Label appVersion;
         private System.Windows.Forms.Label appVerLbl;
+        private System.Windows.Forms.Label sizeLbl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn savenumber_col_savestable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modified_col_savestable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn size_col_savestable;
     }
 }

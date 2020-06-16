@@ -71,14 +71,15 @@ namespace Just_Cause_3_Save_Manager
             en.Add("OverwriteFail", "Failed to overwrite save data");
             en.Add("DeleteFail", "Failed to delete save data");
             en.Add("NewFail", "Failed to save your save data to new slot");
-            en.Add("saveNumberLbl", "Save number");
+            en.Add("saveNumberLbl", "Save");
             en.Add("modifiedLbl", "When saved");
-            en.Add("SaveN", "Save #");
+            en.Add("SaveN", "#");
             en.Add("InputNumberOfNewSaveData", "Input number of new save data!");
             en.Add("recommendedLbl", "Recommended: 0001, 0002");
             en.Add("Overwrite2Confirm", "The save data with the same number already exists. Do you want to OVERWRITE this save data?");
             en.Add("nicknameHintLbl", "It will be visible only in this program and next time you can easier to recognize your Steam profile");
             en.Add("appVerLbl", "Version");
+            en.Add("sizeLbl", "Size");
 
             Dictionary<string, string> ru = new Dictionary<string, string>();
             ru.Add("SelectProfileForm", "JC3 Мастер сохранений - Выбор профиля");
@@ -110,12 +111,13 @@ namespace Just_Cause_3_Save_Manager
             ru.Add("NewFail", "Произошла ошибка при создании нового сохранения");
             ru.Add("saveNumberLbl", "Сохранение");
             ru.Add("modifiedLbl", "Дата изменения");
-            ru.Add("SaveN", "Сохранение #");
+            ru.Add("SaveN", "№");
             ru.Add("InputNumberOfNewSaveData", "Введите номер нового сохранения");
             ru.Add("recommendedLbl", "Рекомендуется: 0001, 0002");
             ru.Add("Overwrite2Confirm", "Сохранение с таким номером уже существует. Перезаписать ЭТО сохранение?");
             ru.Add("nicknameHintLbl", "Он будет виден только в этой программе и в следующий раз Вам будет легче узнать свой профиль Steam");
             ru.Add("appVerLbl", "Версия");
+            ru.Add("sizeLbl", "Размер");
 
             LANG.Add("en", en);
             LANG.Add("ru", ru);

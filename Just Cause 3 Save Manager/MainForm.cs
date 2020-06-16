@@ -69,6 +69,10 @@ namespace Just_Cause_3_Save_Manager
             {
                 modified_col_savestable.HeaderText = modifiedLbl.Text;
             }
+            if (size_col_savestable.HeaderText != sizeLbl.Text)
+            {
+                size_col_savestable.HeaderText = sizeLbl.Text;
+            }
         }
 
         private void nicknameTb_TextChanged(object sender, EventArgs e)
@@ -118,8 +122,10 @@ namespace Just_Cause_3_Save_Manager
             string[] file1;
             string onlyfile;
             string n;
+            string filesize;
             int i = -1;
             int a = -1;
+            FileInfo fileinfo;
             foreach (string file in files)
             {
                 i++;
@@ -130,12 +136,33 @@ namespace Just_Cause_3_Save_Manager
                 {
                     continue;
                 }
+                fileinfo = new FileInfo(file);
+                if (fileinfo.Length < 1024)
+                {
+                    filesize = fileinfo.Length + " B";
+                }
+                else if (fileinfo.Length >= 1024 && fileinfo.Length < (1024 * 1024))
+                {
+                    filesize = String.Format("{0:0.0}", Convert.ToDouble(Convert.ToDouble(fileinfo.Length) / 1024)) + " KB";
+                }
+                else if (fileinfo.Length >= (1024 * 1024) && fileinfo.Length < (1024 * 1024 * 1024))
+                {
+                    filesize = String.Format("{0:0.0}", Convert.ToDouble(Convert.ToDouble(fileinfo.Length) / 1024 / 1024)) + " MB";
+                }
+                else
+                {
+                    continue;
+                }
+                
                 a++;
                 LoadedSavesWithFullPath.Add(file);
                 LoadedSaves.Add(n);
                 SavesTable.RowCount++;
+                fileinfo = new FileInfo(file);
+
                 SavesTable.Rows[a].Cells[0].Value = lm.G("SaveN") + n;
-                SavesTable.Rows[a].Cells[1].Value = File.GetLastWriteTime(file).ToString("dd/MM/yyyy HH:mm:ss");
+                SavesTable.Rows[a].Cells[1].Value = fileinfo.LastWriteTime.ToString("dd/MM/yyyy HH:mm:ss");
+                SavesTable.Rows[a].Cells[2].Value = filesize;
             }
             isTableFilled = true;
 
@@ -153,7 +180,7 @@ namespace Just_Cause_3_Save_Manager
             }
             if (savedIdx != -1 && (savedIdx + 1) <= SavesTable.RowCount)
             {
-                for (int j = 0; j < 2; j++)
+                for (int j = 0; j < 3; j++)
                 {
                     SavesTable.Rows[savedIdx].Cells[j].Style = savedStyle;
                 }
@@ -166,7 +193,7 @@ namespace Just_Cause_3_Save_Manager
             }
             loadSaveDataBtn.Enabled = overwriteSaveData.Enabled = deleteSaveDataBtn.Enabled = true;
             savedStyle = SavesTable.Rows[savedIdx].Cells[1].Style;
-            for (int j = 0; j < 2; j++)
+            for (int j = 0; j < 3; j++)
             {
                 SavesTable.Rows[savedIdx].Cells[j].Style = selectedStyle;
             }

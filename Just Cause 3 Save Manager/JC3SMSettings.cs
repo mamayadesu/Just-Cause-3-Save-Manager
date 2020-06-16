@@ -156,7 +156,7 @@ namespace Just_Cause_3_Save_Manager
             string output = "";
 
             output += "language " + SelectedLanguage;
-            output += "\n\rlastsavedsteamid " + LastSavedSteamId;
+            output += "\r\nlastsavedsteamid " + LastSavedSteamId;
 
             try
             {
